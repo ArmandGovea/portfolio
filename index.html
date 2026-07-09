@@ -567,10 +567,18 @@
     border-radius: 4px;
   }
 
+  .project-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: all 0.18s ease;
+  }
+  .project-card-link:hover { text-decoration: none; }
+
   .project-card.empty {
     border-style: dashed;
     align-items: center;
-    justify-content: center;
+    justify-items: center;
     text-align: center;
     color: var(--text-faint);
     gap: 8px;
@@ -796,18 +804,69 @@
     <p class="section-sub">This section is wired up and ready — send over your projects and I'll drop them straight in.</p>
 
     <div class="project-grid" id="projectGrid">
-      <!--
-        PROJECT CARD TEMPLATE — copy this block for each real project:
-
+      <a href="https://github.com/ArmandGovea/portfolio.git" target="_blank" class="project-card-link">
         <div class="project-card">
-          <div class="pname">Project Name</div>
-          <div class="pdesc">One or two lines on what it does and the problem it solves.</div>
-          <div class="ptech"><span>React</span><span>Python</span></div>
+          <div class="pname">Portfolio Website</div>
+          <div class="pdesc">Interactive developer portfolio with terminal-style animations, Easter eggs, and smooth navigation.</div>
+          <div class="ptech"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Vercel</span></div>
         </div>
-      -->
-      <div class="project-card empty">
-        <div class="pname">// awaiting your first project</div>
-      </div>
+      </a>
+
+      <a href="https://github.com/ArmandGovea/leve-website.git" target="_blank" class="project-card-link">
+        <div class="project-card">
+          <div class="pname">Leve Beauty Bar</div>
+          <div class="pdesc">Full-stack booking website with real-time calendar, Firebase integration, and automated email notifications.</div>
+          <div class="ptech"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Firebase</span><span>EmailJS</span><span>Vercel</span></div>
+        </div>
+      </a>
+
+      <a href="https://github.com/ArmandGovea/ethanol_calculator.git" target="_blank" class="project-card-link">
+        <div class="project-card">
+          <div class="pname">Ethanol Calculator</div>
+          <div class="pdesc">Desktop application for calculating fuel blend percentages with real-time results and professional UI.</div>
+          <div class="ptech"><span>Python</span><span>Tkinter</span><span>GUI</span></div>
+        </div>
+      </a>
+
+      <a href="https://github.com/ArmandGovea/resin_calculator.git" target="_blank" class="project-card-link">
+        <div class="project-card">
+          <div class="pname">Resin Calculator</div>
+          <div class="pdesc">Comprehensive calculator for composite projects with material quantities, cost estimates, and detailed formulas.</div>
+          <div class="ptech"><span>Python</span><span>Tkinter</span><span>GUI</span></div>
+        </div>
+      </a>
+
+      <a href="https://github.com/ArmandGovea/snake_game.git" target="_blank" class="project-card-link">
+        <div class="project-card">
+          <div class="pname">Snake Game</div>
+          <div class="pdesc">Classic snake game with smooth movement, collision detection, and sprint mechanic.</div>
+          <div class="ptech"><span>Python</span><span>Pygame</span><span>Game Dev</span></div>
+        </div>
+      </a>
+
+      <a href="https://github.com/ArmandGovea/slither_game.git" target="_blank" class="project-card-link">
+        <div class="project-card">
+          <div class="pname">Slither Game</div>
+          <div class="pdesc">Cursor-controlled arena game with boost mechanics, real-time leaderboard, and competitive gameplay.</div>
+          <div class="ptech"><span>Python</span><span>Pygame</span><span>Game Dev</span></div>
+        </div>
+      </a>
+
+      <a href="https://github.com/ArmandGovea/forex_position_calc.git" target="_blank" class="project-card-link">
+        <div class="project-card">
+          <div class="pname">Forex Position Calculator</div>
+          <div class="pdesc">Professional trading tool for position sizing, risk management, and forex calculations.</div>
+          <div class="ptech"><span>Python</span><span>Tkinter</span><span>Finance</span></div>
+        </div>
+      </a>
+
+      <a href="https://github.com/ArmandGovea/fastAPI_practice.git" target="_blank" class="project-card-link">
+        <div class="project-card">
+          <div class="pname">Wavelength Chat</div>
+          <div class="pdesc">Real-time chat application with WebSocket support, multiple rooms, and web/CLI interfaces.</div>
+          <div class="ptech"><span>Python</span><span>FastAPI</span><span>WebSockets</span><span>JavaScript</span></div>
+        </div>
+      </a>
     </div>
   </div>
 </section>
