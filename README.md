@@ -1,409 +1,214 @@
-# Slither Game
+# Portfolio Website
 
-A cursor-controlled snake arena game. Control your snake, eat glowing dots to grow, and compete in a multiplayer-style arena while avoiding other snakes. Features smooth cursor tracking, boost mechanics, real-time leaderboard, and strategy-based gameplay.
+A modern, interactive portfolio showcasing web development skills with a terminal-style hero section, smooth animations, and interactive Easter eggs.
 
-Perfect for competitive gaming and learning advanced game development mechanics.
+**Live Demo:** https://armandgovea.vercel.app
 
 ---
 
 ## Features
 
-- Cursor-controlled movement (mouse follows snake direction)
-- Boost mechanic (left-click to accelerate)
-- Arena-based gameplay with multiple snakes
-- Real-time leaderboard tracking top 6 players
-- Smooth animations and fluid movement
-- Minimap for strategic awareness
-- Glowing food dots scattered across arena
-- Collision detection with other snakes
-- Progressive difficulty as you grow
-- Instructions screen
-- Professional UI with score displays
+- Terminal-Style Hero with interactive typing animation
+- Dark theme with gold and cyan modern aesthetic
+- Smooth animations and scroll transitions
+- Interactive navigation with active tab highlighting
+- Easter eggs (Konami code activation, Matrix rain effect)
+- Project showcase with links to repositories
+- Contact section with email and social links
+- Fully responsive mobile-first design
+- Zero dependencies (vanilla HTML, CSS, JavaScript)
 
 ---
 
 ## Tech Stack
 
-- Python 3.8+
-- Pygame (game development library)
-- Object-oriented design
-- Real-time game logic
+- HTML5 (semantic markup)
+- CSS3 (custom properties, flexbox, animations)
+- Vanilla JavaScript (no frameworks)
+- Vercel (hosting)
+- Git & GitHub (version control)
 
 ---
 
-## Requirements
+## Project Structure
 
-Python 3.8 or higher with Pygame installed.
+```
+portfolio/
+└── index.html      # Complete portfolio (HTML, CSS, JS in one file)
+```
+
+Single-file design for simplicity and fast deployment.
 
 ---
 
-## Installation
+## Quick Start
+
+### Local Development
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/ArmandGovea/slither_game.git
-cd slither_game
+git clone https://github.com/ArmandGovea/portfolio.git
+cd portfolio
 ```
 
-2. Install Pygame:
+2. Run locally:
 ```bash
-pip install pygame
+# Option A: Python HTTP Server
+python -m http.server 8000
+
+# Option B: VS Code Live Server Extension
+# Right-click index.html > Open with Live Server
+
+# Open browser to http://localhost:8000
 ```
 
-3. Run the game:
-```bash
-python slither_game.py
-```
-
 ---
 
-## How to Play
+## Interactive Features
 
-Start the Game:
-```bash
-python slither_game.py
-```
+### Terminal Typing Effect
 
-Controls:
-- Mouse Movement: Direct your snake toward cursor
-- Left Mouse Button: Boost (accelerate forward)
-- Escape: Return to menu
-- Enter or Space: Start playing
+Character-by-character animation that simulates typing your introduction on page load. Creates an engaging first impression.
 
-Objective:
-- Move cursor to guide your snake
-- Eat colorful glowing dots to grow
-- Avoid colliding with other snakes
-- Reach the top of the leaderboard
-- Become the longest snake in the arena
+### Smooth Navigation
 
----
+Active tab highlighting and smooth scroll to sections. Navigation bar includes links to projects and contact information.
 
-## Game Mechanics
+### Easter Eggs
 
-Snake Control
+- **Konami Code:** Press up up down down left right left right B A
+- **Matrix Rain:** Cascading green characters effect triggered by the Konami code
+- Additional surprises hidden throughout the site
 
-Your snake always moves toward your mouse cursor:
-- Smooth tracking for fluid movement
-- The closer the cursor, the tighter the control
-- Larger snakes move slightly slower
-- Natural physics-based acceleration
+### Projects Section
 
-Boost System
-
-Hold left-click to activate boost:
-- Temporary speed increase
-- Uses snake body as fuel (loses segments)
-- Strategic resource management
-- Risk vs reward gameplay
-
-Growth Mechanics
-
-Eating food:
-- Eat glowing dots scattered in the arena
-- Each dot increases length by one segment
-- Score increases by 1 point per dot
-- Larger snakes are more visible
-
-Collision System
-
-Multiple collision types:
-- Eating food (beneficial)
-- Hitting another snake body (death)
-- Head-on collision with larger snakes (game over)
-- Grow larger than opponents to survive
-
-Leaderboard
-
-Real-time tracking of top 6 players:
-- Ranked by snake length
-- Updates every frame
-- Visual ranking display
-- Competitive motivation
-
----
-
-## Game Screen Layout
-
-Top Left Corner:
-- Score display
-- Current length
-- Leaderboard (top 6)
-
-Bottom Left:
-- Minimap showing arena overview
-- Small representation of all snakes
-- Helps with strategic planning
-
-Main Arena:
-- Large play area (white background)
-- Your snake (cyan colored)
-- Opponent snakes (various colors)
-- Food dots (colorful)
-
-Instructions:
-- Initial screen explains controls
-- Move Mouse: Control direction
-- Hold Left Click: Boost
-- Eat glowing dots: Grow
-- Avoid others' bodies: Stay alive
-
----
-
-## Strategy Guide
-
-Early Game
-
-- Eat lots of food to grow quickly
-- Avoid larger snakes
-- Use boost sparingly to conserve segments
-- Build a safe starting area
-
-Mid Game
-
-- Balance growth with strategic positioning
-- Use boost to escape threats
-- Hunt smaller snakes for quick growth
-- Monitor leaderboard for threats
-
-Late Game
-
-- Avoid head-on collisions with equals
-- Use size advantage against smaller snakes
-- Strategic boost usage for decisive moments
-- Create traps by encircling opponents
-
-Advanced Tactics
-
-- Herding: Guide smaller snakes into obstacles
-- Baiting: Appear weak then boost away
-- Positioning: Control map areas with high food density
-- Patience: Wait for optimal attack moments
+Links to live GitHub repositories with descriptions of each project, technologies used, and direct links to deployed applications.
 
 ---
 
 ## Customization
 
-Game Speed and Difficulty
+### Colors and Theme
 
-Edit constants at the top of slither_game.py:
+Edit the CSS variables at the top of the `<style>` tag in index.html:
 
-```python
-BASE_SPEED = 4           # Base movement speed
-BOOST_SPEED = 8          # Boosted movement speed
-FOOD_SPAWN_RATE = 0.3    # Food spawn frequency
+```css
+:root {
+  --bg: #0B0E14;              /* Main background */
+  --surface: #131826;         /* Card/section background */
+  --accent-gold: #E8B94D;     /* Primary accent color */
+  --accent-cyan: #5FD0D6;     /* Secondary accent color */
+  --text: #E9ECF1;            /* Main text color */
+  --text-muted: #8891A3;      /* Muted text */
+}
 ```
 
-Arena Size
+### Terminal Text
 
-```python
-SCREEN_WIDTH = 1400      # Arena width
-SCREEN_HEIGHT = 800      # Arena height
-MINIMAP_SIZE = 150       # Minimap dimensions
-```
+Locate the terminal typing effect in the JavaScript section and modify the text strings to personalize your introduction.
 
-Colors
+### Projects
 
-Customize snake and UI colors:
-
-```python
-SNAKE_COLOR = (0, 255, 255)      # Cyan snake
-ENEMY_COLORS = [...]              # Various opponent colors
-FOOD_COLORS = [...]               # Food dot colors
-BACKGROUND = (255, 255, 255)     # Arena background
-```
-
-Leaderboard Size
-
-```python
-LEADERBOARD_SIZE = 6     # Number of top players shown
-```
+Update the projects section in the HTML markup with your own projects, descriptions, and links.
 
 ---
 
-## Code Structure
+## Browser Support
 
-Game Class
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+- Mobile browsers (iOS Safari, Chrome Mobile)
 
-Main controller managing:
-- Game loop and timing
-- Snake updates
-- Food spawning
-- Collision detection
-- Rendering
-- Leaderboard management
+---
 
-Snake Class
+## Deployment
 
-Handles individual snakes:
-- Position and movement
-- Growth mechanics
-- Collision detection
-- Rendering
-- Boost activation
+### Deploy to Vercel
 
-Food Class
+1. Push to GitHub:
+```bash
+git add .
+git commit -m "Update portfolio"
+git push origin main
+```
 
-Manages food elements:
-- Spawning logic
-- Collision detection
-- Visual representation
+2. Go to https://vercel.com
+3. Click "New Project" > Import from GitHub
+4. Select your portfolio repository
+5. Click Deploy
+
+Your portfolio is live!
 
 ---
 
 ## Technical Details
 
-Cursor Tracking
+### Smooth Scrolling
 
-Snake follows mouse position:
-- Calculates direction vector
-- Updates position each frame
-- Smooth interpolation for fluid motion
-- Vector normalization for consistent speed
+Smooth scroll behavior implemented with CSS `scroll-behavior: smooth` and JavaScript click handlers for navigation.
 
-Collision Detection
+### Responsive Design
 
-Per-frame checks for:
-- Snake head to food collisions
-- Snake segment to segment collisions
-- Boundary collisions
+Portfolio adapts to all screen sizes using:
+- CSS Flexbox and Grid
+- Mobile-first approach
+- Media queries for breakpoints
+- Viewport-relative units
 
-Minimap System
+### Performance
 
-Real-time tactical overview:
-- Scaled-down arena representation
-- All snakes shown as colored lines
-- Food as tiny dots
-- Player snake highlighted
-- Helps with strategic awareness
+- Lightweight (no external frameworks)
+- Optimized animations (CSS transforms)
+- Single HTTP request (one file)
+- Fast load times on all connections
 
-Leaderboard Updates
+### Accessibility
 
-Continuous ranking system:
-- Sorts snakes by length
-- Top 6 displayed
-- Updates every frame
-- Encourages competitive play
+- Semantic HTML5 structure
+- Proper heading hierarchy
+- Keyboard navigation support
+- Reduced motion preferences respected
 
 ---
 
-## Performance Optimization
+## Features Explained
 
-Efficient Rendering
+### Real-Time Interactions
 
-- Only redraw changed elements
-- Culling for off-screen objects
-- Minimal memory allocations
+All interactive elements respond instantly with smooth transitions and animations. No page reloads or external API calls needed.
 
-Smooth Movement
+### Konami Code
 
-- Consistent frame rate
-- Interpolated animations
-- Predictive positioning
+Hidden Easter egg that activates the Matrix rain effect. Enter the classic Konami code sequence to trigger it.
 
-Collision Efficiency
+### Contact Integration
 
-- Spatial partitioning for checks
-- Early exit conditions
-- Optimized hitboxes
-
----
-
-## Troubleshooting
-
-Problem: "ModuleNotFoundError: No module named 'pygame'"
-
-Solution: Install Pygame:
-```bash
-pip install pygame
-```
-
----
-
-Problem: Mouse not controlling snake properly
-
-Solution:
-- Make sure game window is in focus
-- Move mouse slowly to test cursor tracking
-- Check if boost is active (holding left-click)
-
----
-
-Problem: Game runs slowly or lags
-
-Solution:
-- Close other applications
-- Reduce number of snakes in game
-- Lower screen resolution temporarily
-- Check CPU usage
-
----
-
-Problem: Can't see leaderboard or minimap
-
-Solution:
-- Maximize game window
-- Ensure minimum resolution of 1400x800
-- Check display scaling settings
-
----
-
-## Game Statistics
-
-Arena Size: 1400x800 pixels
-Maximum snakes: Limited by performance
-Score tracking: Continuous during session
-Leaderboard: Top 6 players
-Food dots: Continuously spawning
+Direct email link and social media links for easy connection with potential clients or collaborators.
 
 ---
 
 ## Future Enhancements
 
-- Persistent leaderboard with rankings
-- Multiple game modes (time attack, survival)
-- Power-ups (shield, speed boost, vision)
-- Custom snake skins and colors
-- Sound effects and background music
-- Chat or messaging between players
-- Replay system
-- Tutorial mode
-- Achievements and badges
-- Mobile version
-
----
-
-## Tips for Success
-
-Movement:
-- Keep cursor ahead of snake for smooth curves
-- Make gradual turns rather than sharp angles
-- Use cursor position for early collision avoidance
-
-Boost Strategy:
-- Boost away from danger, not toward food
-- Save boost for critical moments
-- Don't waste segments on unnecessary acceleration
-- Use boost to escape larger snakes
-
-Food Hunting:
-- Eat constantly to grow
-- Prioritize clustered food areas
-- Balance hunting with survival
-- Retreat to safe zones to consolidate
+- Blog section for technical writing
+- Dark/light mode toggle
+- Project filtering by technology
+- Contact form with backend integration
+- Case studies section
 
 ---
 
 ## Support
 
-Found a bug or have feature suggestions?  
+Questions or feedback?  
 Contact: armandgov27@gmail.com
 
 ---
 
 ## License
 
-MIT License - Feel free to use and modify!
+MIT License - Feel free to use this as a template for your own portfolio!
 
 ---
 
