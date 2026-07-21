@@ -6,47 +6,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Armand Govea — Full Stack Developer</title>
 <meta name="description" content="Portfolio of Armand Govea, Full Stack Developer specializing in React, Python, and modern web development.">
-<meta name="robots" content="index, follow">
-<meta name="theme-color" content="#0B0E14">
-<link rel="canonical" href="https://armandgovea.vercel.app/">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230B0E14'/%3E%3Ctext x='50' y='68' font-family='monospace' font-size='60' font-weight='800' fill='%23E8B94D' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
-
-<!-- Open Graph / Facebook, LinkedIn, etc. -->
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://armandgovea.vercel.app/">
-<meta property="og:title" content="Armand Govea — Full Stack Developer">
-<meta property="og:description" content="Portfolio of Armand Govea, Full Stack Developer specializing in React, Python, and modern web development.">
-<meta property="og:image" content="https://armandgovea.vercel.app/og-image.png">
-<meta property="og:site_name" content="Armand Govea — Portfolio">
-<meta property="og:locale" content="en_ZA">
-
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Armand Govea — Full Stack Developer">
-<meta name="twitter:description" content="Portfolio of Armand Govea, Full Stack Developer specializing in React, Python, and modern web development.">
-<meta name="twitter:image" content="https://armandgovea.vercel.app/og-image.png">
-
-<!-- Structured data: helps Google show a rich result / knowledge panel -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Armand Govea",
-  "url": "https://armandgovea.vercel.app/",
-  "jobTitle": "Full Stack Developer",
-  "email": "mailto:Armandgov27@gmail.com",
-  "telephone": "+27824430545",
-  "address": {
-    "@type": "PostalAddress",
-    "addressCountry": "ZA"
-  },
-  "knowsAbout": ["JavaScript", "Python", "React", "HTML5", "CSS"],
-  "sameAs": [
-    "https://github.com/ArmandGovea"
-  ]
-}
-</script>
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -121,16 +80,6 @@
   }
 
   .mono { font-family: var(--mono); }
-
-  .visually-hidden {
-    position: absolute;
-    width: 1px; height: 1px;
-    padding: 0; margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
-  }
 
   .section-inner {
     max-width: var(--max-w);
@@ -588,6 +537,61 @@
     margin-bottom: 14px;
   }
 
+  /* ============ CERTIFICATIONS ============ */
+  .cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+  }
+  .cert-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: border-color 0.18s ease, transform 0.18s ease;
+  }
+  .cert-card:hover { border-color: var(--accent-gold-dim); transform: translateY(-3px); }
+  .cert-card .chead {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  .cert-card .cname { font-size: 16px; font-weight: 700; color: var(--text); }
+  .cert-card .cbadge {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    color: var(--accent-gold);
+    background: rgba(232,185,77,0.08);
+    padding: 3px 9px;
+    border-radius: 4px;
+    flex-shrink: 0;
+  }
+  .cert-card .cdesc { color: var(--text-muted); font-size: 13.5px; flex-grow: 1; }
+  .cert-card .cmeta {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    color: var(--text-faint);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: space-between;
+    margin-top: 4px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border-soft);
+  }
+  .cert-card .cverify {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--accent-cyan);
+  }
+  .cert-card .cverify svg { flex-shrink: 0; }
+  .cert-card-link { text-decoration: none; color: inherit; display: block; }
+
   /* ============ PROJECTS ============ */
   .project-grid {
     display: grid;
@@ -703,6 +707,7 @@
     <a href="#about" class="tab" data-tab="about"><span class="dot"></span>about.js</a>
     <a href="#experience" class="tab" data-tab="experience"><span class="dot"></span>experience.js</a>
     <a href="#skills" class="tab" data-tab="skills"><span class="dot"></span>skills.json</a>
+    <a href="#certifications" class="tab" data-tab="certifications"><span class="dot"></span>certs.json</a>
     <a href="#projects" class="tab" data-tab="projects"><span class="dot"></span>projects.js</a>
     <a href="#contact" class="tab" data-tab="contact"><span class="dot"></span>contact.md</a>
   </div>
@@ -718,7 +723,6 @@
       </div>
       <div class="terminal-body" id="termBody"></div>
     </div>
-    <h1 class="visually-hidden">Armand Govea — Full Stack Developer specializing in React, Python and JavaScript</h1>
     <p class="term-hint">psst — click the terminal and try typing <span class="hl">help</span></p>
 
     <div class="hero-cta" id="heroCta">
@@ -759,7 +763,7 @@
           <span class="date mono">2024</span>
           <span class="what">Harvard CS50</span>
           <span class="where">— Cambridge, Massachusetts</span>
-          <span class="certs">// Programming with Scratch · Programming with Python · CS50 Completion</span>
+          <span class="certs">// CS50x: Intro to CS · CS50P: Intro to Programming with Python · CS50S: Intro to Programming with Scratch · CS50AI: Intro to AI with Python — see certs.json below</span>
         </div>
         <div class="edu-row">
           <span class="date mono">2024</span>
@@ -845,6 +849,85 @@
           <span class="tag">Adaptability</span>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CERTIFICATIONS ============ -->
+<section class="block" id="certifications">
+  <div class="section-inner">
+    <div class="file-label"><span class="bar"></span>certs.json</div>
+    <h2 class="heading">Certifications<span class="punct">;</span></h2>
+    <p class="section-sub">Harvard's CS50 series — click any card to verify on cs50.harvard.edu.</p>
+
+    <div class="cert-grid">
+      <a href="https://cs50.harvard.edu/certificates/5e783f70-2143-4ef2-9f0d-9882c2e9c59d" target="_blank" class="cert-card-link">
+        <div class="cert-card">
+          <div class="chead">
+            <div class="cname">CS50's Introduction to AI with Python</div>
+            <span class="cbadge">CS50AI</span>
+          </div>
+          <div class="cdesc">Search, knowledge, uncertainty, optimization, learning, neural networks and language — completed with twelve projects.</div>
+          <div class="cmeta">
+            <span>Harvard University · 2024</span>
+            <span class="cverify">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg>
+              Verify
+            </span>
+          </div>
+        </div>
+      </a>
+
+      <a href="https://cs50.harvard.edu/certificates/59411714-2d1e-4219-8f67-43fb97d873d5" target="_blank" class="cert-card-link">
+        <div class="cert-card">
+          <div class="chead">
+            <div class="cname">CS50x — Introduction to Computer Science</div>
+            <span class="cbadge">CS50x</span>
+          </div>
+          <div class="cdesc">Harvard's flagship CS course — algorithms, data structures, C, Python, SQL and web dev — ten problem sets and a final project.</div>
+          <div class="cmeta">
+            <span>Harvard University · 2024</span>
+            <span class="cverify">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg>
+              Verify
+            </span>
+          </div>
+        </div>
+      </a>
+
+      <a href="https://cs50.harvard.edu/certificates/692bbb4b-b100-4792-8f92-5990a6706979" target="_blank" class="cert-card-link">
+        <div class="cert-card">
+          <div class="chead">
+            <div class="cname">CS50P — Introduction to Programming with Python</div>
+            <span class="cbadge">CS50P</span>
+          </div>
+          <div class="cdesc">Core Python fundamentals through nine problem sets and a final project — functions, exceptions, libraries, unit tests and more.</div>
+          <div class="cmeta">
+            <span>Harvard University · 2024</span>
+            <span class="cverify">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg>
+              Verify
+            </span>
+          </div>
+        </div>
+      </a>
+
+      <a href="https://cs50.harvard.edu/certificates/0b7e1cd3-d417-40c0-b8c9-483245e39891" target="_blank" class="cert-card-link">
+        <div class="cert-card">
+          <div class="chead">
+            <div class="cname">CS50S — Introduction to Programming with Scratch</div>
+            <span class="cbadge">CS50S</span>
+          </div>
+          <div class="cdesc">Foundational programming concepts — loops, conditionals, variables and events — through nine original Scratch projects.</div>
+          <div class="cmeta">
+            <span>Harvard University · 2024</span>
+            <span class="cverify">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg>
+              Verify
+            </span>
+          </div>
+        </div>
+      </a>
     </div>
   </div>
 </section>
